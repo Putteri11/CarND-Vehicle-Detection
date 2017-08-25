@@ -89,11 +89,11 @@ I recorded the positions of positive detections in each frame of the video.  Fro
 
 Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
 
-### Here are six frames and their corresponding heatmaps:
+### Here are seven frames and their corresponding heatmaps:
 
 ![alt text][image7]
 
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
+### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all seven frames:
 ![alt text][image8]
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series:
@@ -107,4 +107,4 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-The pipeline seems to have some problems detecting the white car in the test images and in the video stream. That is, it detects the black car more reliably than the white one.
+The pipeline seems to have some problems detecting the white car in the test images and in the video stream. That is, it detects the black car more reliably than the white one. Better optimization of parameters could help improve their detection. Also, as in mahcine learning in general, more training data could help the pipeline's performance quite a bit. The pipeline also has some trouble with positive detections in the edges of the image. This could be improved by increasing the number of search windows there.
